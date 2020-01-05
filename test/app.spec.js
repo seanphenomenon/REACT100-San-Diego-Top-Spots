@@ -5,7 +5,7 @@ const Nightmare = require('nightmare');
 const expect = require('chai').expect;
 const topspots = require('./topspots.json');
 
-const nightmareTimeout = 6500;
+const nightmareTimeout = 9500;
 
 let nightmare;
 
@@ -13,9 +13,9 @@ const app = express();
 app.use(express.static(path.join(__dirname, '/../public')));
 app.use(express.static(path.join(__dirname, '/../dist')));
 
-app.listen(8888);
+app.listen(3000);
 
-const url = 'http://localhost:8888';
+const url = 'http://localhost:3000';
 
 describe('top spots', function () {
   this.timeout(nightmareTimeout);
